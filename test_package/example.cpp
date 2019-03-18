@@ -22,7 +22,7 @@ int main(int argc, char **argv)
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
   glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
   glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-  auto window = glfwCreateWindow(640, 480, "test_package", NULL, NULL);
+  GLFWwindow * window = glfwCreateWindow(640, 480, "test_package", NULL, NULL);
   if (!window)
   {
     std::cout << "failed to create glfw context\n";
