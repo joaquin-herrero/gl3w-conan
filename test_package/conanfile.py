@@ -5,7 +5,7 @@ import os
 class Gl3wTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
-    requires = "glfw/3.2.1@bincrafters/stable"
+    requires = "glfw/3.2.1@arkaedra/testing"
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = "shared=True", "fPIC=True"
 
