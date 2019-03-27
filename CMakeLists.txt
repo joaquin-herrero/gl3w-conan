@@ -3,19 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(gl3w)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(KEEP_RPATHS)
-
-################
-# Set RPATHs
-################
-if(APPLE)
-  set(CMAKE_INSTALL_RPATH "@executable_path/../lib")
-else()
-  set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
-endif()
-
-set(CMAKE_BUILD_WITH_INSTALL_RPATH ON)
-
+conan_basic_setup()
 
 # add and depend on OpenGL
 find_package(OpenGL REQUIRED)
