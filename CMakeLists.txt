@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.12)
 
+# Required for OSX rpaths
+# https://cmake.org/cmake/help/v3.13/policy/CMP0068.html
+if( COMMAND cmake_policy )
+  cmake_policy( SET CMP0068 OLD )
+endif( COMMAND cmake_policy )
+
 project(gl3w)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
